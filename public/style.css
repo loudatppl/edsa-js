@@ -40,8 +40,8 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 40%;
-    left: 37%;
+    top: 50%;
+    left: 50%;
 }
 
 #start-screen h1{
@@ -159,7 +159,7 @@ body {
     z-index: 3;
     height: 800px;
     width: 450px;
-    background-image: url('/images/road.png');
+    background-image: url('./images/road.png');
     background-repeat: repeat-y;
     animation: movingBackground 4s linear infinite;
     overflow: hidden;
@@ -228,8 +228,8 @@ body {
     flex-direction: column;
     gap: 2rem;
     position: fixed;
-    top: 40%;
-    left: 37%;
+    top: 50%;
+    left: 50%;
 }
 
 #you-crashed {
