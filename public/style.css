@@ -1,0 +1,272 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: 
+    url(./images/City\ Backround\ Layer1.png),
+    url(./images/City\ Backround\ Layer2.png),
+    url(./images/City\ Backround\ Layer3.png),
+    url(./images/City\ Backround\ Layer4.png),
+    url(./images/City\ Backround\ Layer5.png),
+    url(./images/City\ Backround\ Layer6.png),
+    url(./images/City\ Backround\ Layer7.png),
+    url(./images/City\ Backround\ Layer8.png),
+    url(./images/City\ Backround\ Layer9.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+/* START SCREEN */
+#start-screen {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    left: 37%;
+}
+
+#start-screen h1{
+    font-size: 8rem;
+    text-shadow: 5px 10px #1a1a1a;
+    cursor: pointer;
+}
+
+/* INFO CONTAINER */
+#info-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 700px;
+    height: 340px;
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+    padding: 30px 20px;
+    line-height: 20px;
+    list-style: none;
+    position: fixed;
+    z-index: 3;
+    top: 3%;
+    left: 31%;
+    border: 2px solid #e6e6e6;
+}
+
+#info-container h2 {
+    margin-top: 4rem;
+}
+
+#info-container ol {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+/* EDSA */
+#start-screen #e-edsa {
+    color: #ffca3a;
+}
+#start-screen #d-edsa {
+    color: #e6e6e6;
+}
+#start-screen #s-edsa {
+    color: #1982c4;
+}
+#start-screen #a-edsa {
+    color: #ff595e;
+}
+
+/* BUTTONS */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 4rem;
+    gap: 2rem;
+    width: 500px;
+}
+
+.button {
+    background-color: #e6e6e6;
+    padding: 10px 20px;
+    box-shadow: 5px 10px #1a1a1a;
+    cursor: pointer;
+    font-size: 10px;
+    border: none;
+    color: #1a1a1a;
+}
+
+
+/* MAIN SCREEN */
+#main-screen {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 73%;
+    left: 25%;
+    color: #e6e6e6;
+    gap: 2rem;
+}
+
+#controls h3 {
+    font-size: 18px
+}
+
+#time-display {
+    color: #e6e6e6;
+    top: 15%;
+    left: 15%;
+    position: absolute;
+    z-index: 4;
+}
+
+#time {
+    top: 5%;
+    z-index: 5;
+}
+
+
+/* GAME SCREEN */
+#game-screen {
+    z-index: 3;
+    height: 800px;
+    width: 450px;
+    background-image: url('/images/road.png');
+    background-repeat: repeat-y;
+    animation: movingBackground 4s linear infinite;
+    overflow: hidden;
+    background-size: contain;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+
+}
+
+/* CARS */
+#main-car {
+    height: 100px;
+    width: 90px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+#main-car img {
+    height: 100px;
+}
+
+.npc {
+    height: 100px;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    animation: drive 3s linear infinite;
+ 
+}
+
+.npc img {
+    height: 100px;
+}
+
+#random-car1 {
+    left: 0;
+}
+
+#random-car2 {
+    left: 90px;
+}
+
+#random-car3 {
+    left: 270px;
+}
+
+
+/* GAMEOVER SCREEN */
+#gameover-screen {
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#gameover-display {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    position: fixed;
+    top: 40%;
+    left: 37%;
+}
+
+#you-crashed {
+    font-size: 50px;
+}
+
+#time {
+    font-size: 24px;
+}
+
+#you-crashed, #time {
+    color: #e6e6e6;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* ANIMATIONS */
+@keyframes drive {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 801px;
+    }
+}
+
+@keyframes movingBackground {
+    from {
+      background-position: 0px 0px;
+    }
+    to {
+      background-position: 0px 1000px;
+    }
+}
+
+
+#main-screen, #game-screen, #gameover-screen, #info-container {
+    display: none;
+}

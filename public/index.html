@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EDSA</title>
+</head>
+<body>
+    <section id="start-screen">
+        <main id="logo-container">
+            <h1><span id="e-edsa">E</span><span id="d-edsa">D</span><span id="s-edsa">S</span><span id="a-edsa">A</span>
+            </h1>
+            <div class="button-container">
+                <p class="button" id="play-button">play</p>
+                <p class="button" id="howTo-button">how to</p>
+            </div>
+        </main>
+        <div id="info-container">
+            <p>
+                Welcome to EDSA!
+                In this game, you'll be driving a car and your goal is
+                to avoid crashing into other cars for as long as possible.
+                The longer you can avoid crashing, the higher your score will be.
+                So, buckle up and get ready to hit the road!
+            </p>
+            <h2>Instructions</h2>
+            <ol>
+                <li>1. To start the game, press play.</li>
+                <li>2. Use the arrow keys(⬅⬆➡⬇) to move.</li>
+                <li>3. Avoid crashing into cars. If you crash, the game is over</li>
+            </ol>
+        </div>
+    </section>
+    <section id="main-screen">
+        <h2 id="time-display">Time: <span id="timer">0</span></h2>
+        <div id="controls">
+            <h3>controls</h3>
+            <img src="/images/arrow-keys.png" alt="Up Down Left Right" height="120px">
+        </div>
+        <main id="game-screen">
+            <div id="main-car"><img src="./images/Car.png" alt="main car"></div>
+            <div class='npc car' id="random-car1"><img src="./images/Mini_van.png" alt="mini van"></div>
+            <div class='npc car' id="random-car2"><img src="./images/taxi.png" alt="taxi"></div>
+            <div class='npc car' id="random-car3"><img src="./images/truck.png" alt="truck"></div> 
+        </main>
+    </section>
+    <section id="gameover-screen">
+        <div id="gameover-display">
+            <h2 id="you-crashed">YOU CRASHED</h2>
+            <p id="time">Time: <span id="final-time">0</span></p>
+            <div class="button-container">
+                <p class="button" id="restart-button">restart</p>
+                <p class="button" id="menu-button">menu</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
