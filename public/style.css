@@ -40,8 +40,8 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 37%;
 }
 
 #start-screen h1{
@@ -228,8 +228,8 @@ body {
     flex-direction: column;
     gap: 2rem;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 37%;
 }
 
 #you-crashed {
